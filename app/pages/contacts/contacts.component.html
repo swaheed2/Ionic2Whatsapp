@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar  secondary>
+    <ion-title>Whatsapp</ion-title>
+
+    <ion-buttons end>
+      <button (click)="test()"> <ion-icon name="search"></ion-icon> </button>
+      <button (click)="test()"> <ion-icon name="md-person-add"></ion-icon> </button>
+      <button (click)="test()"> <ion-icon name="menu"></ion-icon> </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="contacts">
+
+
+  <ion-spinner *ngIf="!contacts"></ion-spinner>
+  <ion-refresher (ionRefresh)="refreshContacts($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <ion-list class="contacts">
+
+    <ion-item *ngFor="let contact of contacts" class="contact">
+
+      <ion-avatar item-left> <img src="{{contact.avatar}}"> </ion-avatar>
+
+      <h2>{{contact.name}}</h2>
+      <p>{{contact.status}}</p>
+      <p item-right class="type">{{contact.type}}</p> 
+
+    </ion-item>
+
+  </ion-list>
+
+
+</ion-content>

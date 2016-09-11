@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar secondary>
+    <ion-title *ngIf="!search" >Whatsapp</ion-title>
+    
+    <ion-buttons end *ngIf="!search" >
+      <button (click)="toggleSearch()"> <ion-icon name="search"></ion-icon> </button>
+      <button (click)="test()"> <ion-icon name="chatboxes"></ion-icon> </button>
+      <button (click)="test()"> <ion-icon name="menu"></ion-icon> </button>
+    </ion-buttons>
+
+    <ion-searchbar showCancelButton="true" (ionCancel)="toggleSearch()" (ionBlur)="toggleSearch()" *ngIf="search" (ionInput)="searchChats($event)"></ion-searchbar>
+
+  </ion-navbar> 
+</ion-header>
+
+<ion-content class="chats">
+  <ion-spinner *ngIf="!chats"></ion-spinner>
+  <ion-refresher (ionRefresh)="refreshChats($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <ion-list class="chats">
+    <ion-item *ngFor="let chat of chats" class="chat">
+      <ion-avatar item-left>
+        <img src="{{chat.avatar}}">
+      </ion-avatar>
+      <h2>{{chat.name}}</h2>
+      <p>{{chat.message}}</p>
+      <p item-right class="time">{{chat.time}}</p>
+      <p item-right class="light unread" *ngIf="chat.unread">{{chat.unread}}</p>
+    </ion-item>
+  </ion-list>
+</ion-content>
