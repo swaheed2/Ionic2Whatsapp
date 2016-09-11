@@ -2,6 +2,8 @@
 
 Whatsapp design clone in Ionic2/Angular2
 
+![Alt text](/screenshot.png?raw=true "Screenshot Android")
+
 ##Install:
 
 #### Install Ionic 2:       
