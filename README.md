@@ -2,7 +2,7 @@
 
 Whatsapp design clone in Ionic2/Angular2
 
-<img src="screenshot.png" alt="Drawing" style="height: 500px;width: 100px;"/>
+<img src="screenshot.png" data-canonical-src="screenshot.png" width="230" height="400" />
 
 
 ##Install:
