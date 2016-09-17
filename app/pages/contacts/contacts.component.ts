@@ -1,7 +1,6 @@
 import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
-import { ContactsService } from './contacts.service';
-import moment from 'moment';
+import { ContactsService } from './contacts.service'; 
 
 @Component({
   templateUrl: 'build/pages/contacts/contacts.component.html',
