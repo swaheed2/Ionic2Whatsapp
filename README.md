@@ -1,6 +1,6 @@
-# Ionic2Whatsapp
+# Whatsapp clone in Ionic 2 and Angular 2
 
-Whatsapp design clone in Ionic2/Angular2
+
 
 <img src="screenshot.png" data-canonical-src="screenshot.png" width="230" height="400" />
 
